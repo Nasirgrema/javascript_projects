@@ -1,6 +1,7 @@
 
-var btn = ducoment.getElementById("next");
-const profiles =[
+var img = document.getElementsByTagName("img")[0];
+var btn = document.getElementsByTagName("button")[0];
+const profiles = [
 {
     name:"Aramma",
     nickname: "buna",
@@ -11,21 +12,42 @@ const profiles =[
     name:"kamall pk",
     nickname: "programmer",
     phone: "+2348063534262",
-    photo:"../img/author.png",
+    photo:"../img/Aramma2.jpg",
 },
 {
     name:"hasan",
     nickname: "maza",
     phone: "+2348063534262",
-    photo:"",
+    photo:"../img/img2.jpg",
 },
 
 ]
 let index =0;
-function update(){
-const profile = profiles[index]
-document.getElementById("name").textContent= profile.name;
-document.getElementById("nickname").textContent= profile.nickname;
-document.getElementById("phone").textContent= profile.phone;
-document.getElementById("pic").textContent= profile.photo;
-};
+btn.addEventListener("click", function(){
+if(index ===0){
+img.src = profiles[index].photo;
+document.getElementById("name").textContent= profiles[index].name;
+document.getElementById("nickname").textContent= profiles[index].nickname;
+document.getElementById("phone").textContent= profiles[index].phone;
+document.getElementById("pic").textContent= profiles[index].photo;
+
+index = 1;
+} else if(index===1){
+    img.src=profiles[index].photo;
+    document.getElementById("name").textContent= profiles[index].name;
+document.getElementById("nickname").textContent= profiles[index].nickname;
+document.getElementById("phone").textContent= profiles[index].phone;
+document.getElementById("pic").textContent= profiles[index].photo;
+
+index=2;
+}else if(index===2){
+    img.src=profiles[index].photo;
+    document.getElementById("name").textContent= profiles[index].name;
+document.getElementById("nickname").textContent= profiles[index].nickname;
+document.getElementById("phone").textContent= profiles[index].phone;
+document.getElementById("pic").textContent= profiles[index].photo;
+
+index=0;
+}
+});
+
