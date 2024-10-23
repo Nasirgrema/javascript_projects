@@ -6,22 +6,28 @@
 </head>
 <body>
     <div id="login">
-      <h2>login</h2>
+      <h2>Login</h2>
       <input type="text" id="name" placeholder="Enter your name" required>
       <input type="email" id="email" placeholder="Enter your email" required>
-      <button type="button" id="loginBtn">Login</button>
+      <button  id="loginBtn">Login</button>
     </div>
-    <nav>
+    <nav id="menu" style="display:none;">
         <ul>
             <li><a href="#home">Home</a> </li>
             <li><a href="#add-task">Add task</a> </li>
             <li><a href="#task-list">Task List</a> </li>
         </ul>
     </nav>
-    <h1>Task manager</h1>
+    <div id = "content" style = "display: none;">
+    <h1 id="home" >Task manager</h1>
     <input type="text" id="taskInput" placeholder="add a new task">
     <button id="addTaskBtn">Add task</button>
     <ul id="taskList"></ul>
+    <!-- Image upload secton -->
+    <h2>Upload your picture</h2>
+    <input type="file" id="imageUpload" accept="image/*">
+    <div id="imagePreview"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
